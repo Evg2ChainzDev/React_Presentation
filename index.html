@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Hi there, my name is Eugene. And the topic of my presentation is React. React is a JavaScript library for building fast and interactive user interfaces. It was developed at Facebook in 2011 and currently it's the most popular javascript library for building user interfaces -->
+			<section>A Javascript library for building user interfaces</section>
+
+
+			<!-- As you can see on google trends react is dominating the space of libraries and frameworks for building user interfaces
+				the other two players here are angular and vue. So if you want to expand your job opportunities as a front-end developer
+				you should have react on your cv -->
+			<section>
+				<img src="./imgs/Screenshot_1.jpg" alt="">
+			</section>
+
+
+			<section>
+				<!-- At the heart of all  react applications are components. A component is essentially a piece of the user interface so when building applications with react we build a bunch of independent isolated and reusable components and then compose them to build complex user interfaces. -->
+				<section>
+					<img src="./imgs/Screenshot_2.jpg" alt="">
+				</section>
+				<section>
+					<img src="./imgs/Screenshot_3.jpg" alt="">
+				</section>
+				<!-- Every react application has at least one component which we refer to, as the root component this component represents the internal application and contains other child components so every react application is essentially a tree of components. If you have worked with Angular 2 or higher it should sound familiar -->
+				<section>
+					<img src="./imgs/Screenshot_4.jpg" alt="">
+				</section>
+			</section>
+
+			<section>
+				<!-- here is an example let's imagine we want to build an application like Twitter. We can split this page into components like navbar, profile, trends and feed -->
+				<section>
+					<img src="./imgs/Screenshot_5.jpg" alt="">
+				</section>
+				<section>
+					<img src="./imgs/Screenshot_6.jpg" alt="">
+				</section>
+				<section>
+					<img src="./imgs/Screenshot_7.jpg" alt="">
+				</section>
+				<section>
+					<img src="./imgs/Screenshot_8.jpg" alt="">
+				</section>
+				<section>
+					<img src="./imgs/Screenshot_9.jpg" alt="">
+				</section>
+				<!-- Here's a representation of these components in a tree, so at the top we have 'app' and below that we have 'navbar' 'profile' 'trends' and 'feed'. Now feed includes several 'tweet' components, each 'tweet' component can include a 'like' component which we can reuse on other pages or even in different applications. So as you see, each component is a piece of UI. We can build these components in isolation and then put them together to build complex UIs -->
+				<section>
+					<img src="./imgs/Screenshot_10.jpg" alt="">
+				</section>
+			</section>
+
+			<section>
+				<!-- In terms of implementation a component is typically implemented as a JavaScript class that has some state and render method. The state here is the data that we want to display when the component is rendered and the render method as you can tell is responsible for describing what the UI should look like. -->
+				<section>
+					<img src="./imgs/Screenshot_11.jpg" alt="">
+				</section>
+				<section>
+					<img src="./imgs/Screenshot_12.jpg" alt="">
+				</section>
+				<section>
+					<!-- The output of this render method is a React element which is a simple plain JavaScript object that maps to a Dom element. It's not a real Dom element is just a plain JavaScript object that represents that Dom element in memory.So React keeps a lightweight representation of the Dom in memory which were referred to as the virtual Dom -->
+					<img src="./imgs/Screenshot_13.jpg" alt="">
+				</section>
+				<!-- Unlike the browser or the real Dom, this virtual DOM is cheap to create. When we change the state of a component, we get a new React element -->
+				<section>
+					<img src="./imgs/Screenshot_14.jpg" alt="">
+				</section>
+				<section>
+					<!-- React will then compare this element and his children with the previous one, it figures out what is changed and then -->
+					<img src="./imgs/Screenshot_15.jpg" alt="">
+				</section>
+				<section>
+					<!-- it will update a part of the real Dom to keep it in sync with the virtual Dom. So that means when building applications with React unlike vanilla JavaScript or jQuery  we no longer have to work with the Dom API in browsers-->
+					<img src="./imgs/Screenshot_16.jpg" alt="">
+				</section>
+					
+			</section>
+
+			<section>
+				<section>
+					<!-- In other words we no longer have to write code in Jquery and manipulate the Dom or attached event handlers to Dom elements. We change the state of our components and React will automatically update the Dom to match that state-->
+					<img src="./imgs/Screenshot_17.jpg" alt="">
+				</section>
+				<section>
+					<!-- And that's exactly why this library is called react because when the state changes react essentially Reacts to the state change and updates the DOM -->
+					<img src="./imgs/Screenshot_18.jpg" alt="">
+				</section>
+			</section>
+
+			<section>
+				<!-- One of the greatest things about React is its ability to manage your data and properly rerender your application when your data changes.But there are two main ways in React to think about data. There's props and their state and it can be a bit confusing to understand when you should use props and when you should be using state. So let's figure out exactly what props are exactly what a state is and why you should use props versus state inside your application -->
+				<section>
+					<img src="./imgs/vXc4HymloHn.jpg" alt="">
+				</section>
+
+				<section>
+					<!-- 
+										let’s recap and see the main differences between props and state:
+										Components receive data from outside with props, whereas they can create and manage their own data with state
+										Props are used to pass data, whereas state is for managing data
+										Data from props is read-only, and cannot be modified by a component that is receiving it from outside
+										State data can be modified by its own component, but is private (cannot be accessed from outside)
+										Props can only be passed from parent component to child (unidirectional flow)
+										Modifying state should happen with the setState ( ) method -->
+					<img src="./imgs/1640192078554.png" alt="">
+				</section>
+			</section>
+
+
+			<section>
+				<!-- One of the questions that people often get is React or Angular.Well both React and Angular are similar in terms of their component based architecture, however Angular is a framework or a complete solution while React is a library. It only takes care of rendering the view and making sure that the view is in sync with the state. That's all React does nothing less nothing more. For this very reason React has a very small API to learn. So when building applications with React we need to use other libraries for things like routing or calling HTTP services and so on. But this is not necessarily a bad thing because you get to choose the libraries that you prefer as opposed to being fixed with what angular gives you which often breaks from one version to another-->
+				<img src="./imgs/Screenshot_19.jpg" alt="">
+			</section>
+				<!-- So that's all about React. Thank you very much for watching the video this far and I hope you have a great day -->
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
